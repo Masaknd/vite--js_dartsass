@@ -1,0 +1,11 @@
+#footer {
+  padding-bottom: 0.8rem;
+  background-color: $color-black;
+  color: $color-white;
+  text-align: center;
+
+  & .copyright {
+    @include respond(phone) {
+    }
+  }
+}

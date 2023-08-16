@@ -1,0 +1,62 @@
+#contact {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+
+  background-color: $color-black;
+  color: $color-white;
+
+  & .contact-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3.2rem;
+
+    @include respond(tab-land) {
+      padding: 0rem 3.2rem;
+    }
+    @include respond(tab-port) {
+      padding: 0rem 2.6rem;
+    }
+    @include respond(phone) {
+      padding: 0rem 1.6rem;
+      flex-direction: column;
+    }
+  }
+
+  & .footer-text__wrapper,
+  & .contact-form {
+    display: inline-block;
+    width: 45%;
+    text-align: justify;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  & .footer-text__wrapper p,
+  & .footer-text__wrapper h4 {
+    margin-bottom: 3rem;
+  }
+
+  & .contact-form input,
+  & .contact-form textarea {
+    width: 100%;
+    padding: 1.6rem;
+    margin-bottom: 2.5rem;
+    outline: none;
+  }
+
+  #btn-submit {
+    width: 20rem;
+    background-color: $color-black;
+    color: $color-white;
+    text-transform: uppercase;
+    border: 1px solid $color-white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+#feature {
+  padding: 5rem 1.6rem 6rem 1.6em;
+
+  & .items {
+    display: grid;
+    // minmaxで指定することによりMediaQueryでサイズごとにグリッド割りを指定せずに済む
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+
+  & .item {
+    display: block;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  & .fadein {
+    opacity: 0;
+  }
+
+  & .inview {
+    animation: fadeIn 2s forwards;
+  }
+
+  & .item-content {
+    text-align: justify;
+    padding: 3rem;
+  }
+
+  & .item p {
+    margin-bottom: 2rem;
+  }
+
+  & .item .item-category,
+  & .item .item-date {
+    font-size: 1.2rem;
+  }
+
+  & .item .item-date {
+    text-align: right;
+  }
+
+  & .item .item-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    /* アニメーションの開始値を定義 */
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  to {
+    /* アニメーションの終了値を定義 */
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

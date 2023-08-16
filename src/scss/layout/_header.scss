@@ -1,0 +1,177 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0rem 4.5rem;
+  background-color: #fff;
+  z-index: 10;
+
+  & .logo {
+    padding: 2rem 0;
+    line-height: 1px;
+
+    & img {
+      width: 17.5rem;
+    }
+  }
+
+  @include respond(phone){
+    padding: 0 1.6rem;
+  }
+}
+
+/*------------------------------------------------------
+   hamburger button & menu screen
+  ------------------------------------------------------*/
+/*
+ハンバーガーメニュー
+メニューが閉じている時は、「left: -300px;」で画面左に隠し、
+「opacity: 0;」で非表示にしている
+*/
+#navi {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #000;
+  padding: 6rem 2.5rem 0 2.5rem;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 3000;
+}
+
+#navi a {
+  color: $color-white;
+}
+
+.open #navi {
+  left: 0px;
+  opacity: 1;
+}
+
+.navi-menu {
+  padding-bottom: 6rem;
+  text-align: justify;
+  text-transform: uppercase;
+  border-top: 1px solid $color-white;
+
+  & li {
+    width: 100%;
+    padding: 2rem 0;
+    border-bottom: 1px solid $color-white;
+  }
+}
+
+.socialMedia {
+  text-align: justify;
+
+  & li {
+    padding: .5rem 0;
+  }
+}
+
+/*
+ボタン動作
+*/
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  //BUTTON BODY
+  &__button {
+    background-color: transparent;
+    height: 4rem;
+    width: 4rem;
+    position: block;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  //ICON
+  &__icon {
+    // -- NORMAL STATE OF ICON -- //
+    position: relative;
+    margin-top: 2rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: 1rem;
+    }
+    &::after {
+      top: -1rem;
+    }
+    // -- /NORMAL STATE OF ICON -- //
+  }
+
+  // -- HOVER STATE -- //
+  //LINE HOVER ANIMATION
+  &__button:hover &__icon::before {
+    top: 0.4rem;
+  }
+  &__button:hover &__icon::after {
+    top: -0.4rem;
+  }
+
+  // -- CLICK STATE -- //
+  //LINE CROSS ANIMATION
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent; //HIDE MID LINE
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg); //ROTATE TOP LINE
+    top: 0rem;
+    background-color: $color-white;
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-135deg); //ROTATE BOTTOM LIN
+    top: 0rem;
+    background-color: $color-white;
+  }
+}
+
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+/*
+メニューを開いている時は、全体を黒背景にする
+*/
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $color-black;
+  opacity: 0.9;
+  z-index: -1;
+  cursor: pointer;
+}
