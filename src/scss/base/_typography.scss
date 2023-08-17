@@ -1,16 +1,18 @@
+@use "../global";
+
 html {
   /* This define what 1rem is */
   font-size: 62.5%;
 
-  @include respond(tab-land) {
+  @include global.respond(tab-land) {
     font-size: 56.25%; /* 1rem = 9px 9/16 = 56.25% */
   }
 
-  @include respond(tab-port) {
+  @include global.respond(tab-port) {
     font-size: 50%; /* 1rem = 8px 8/16 = 50% */
   }
 
-  @include respond(big-desktop) {
+  @include global.respond(big-desktop) {
     font-size: 75%; /* 1rem = 12px 12/16 = 75% */
   }
 }
@@ -20,11 +22,11 @@ body {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.6;
-  color: $color-black;
+  color: global.$color-black;
 }
 
 a {
-  color: $color-black;
+  color: global.$color-black;
 }
 
 .section-title {

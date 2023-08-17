@@ -3,6 +3,7 @@ import path, { resolve } from "path";
 import globule from "globule";
 import eslint from "@nabla/vite-plugin-eslint";
 import handlebar from "vite-plugin-handlebars";
+import pluginRewriteAll from "vite-plugin-rewrite-all"
 
 const inputs = {};
 const documents = globule.find([`./src/**/*.html`, `./src/**/*.pug`], {
@@ -26,10 +27,12 @@ const pageData = {
 };
 
 export default defineConfig({
-  root: "src",
+  root: "./src",
+  base:'./',
   server: {
     host: true,
     port: 5500,
+    middlewareMode: false,
   },
   build: {
     outDir: "../dist",
@@ -69,5 +72,6 @@ export default defineConfig({
         return pageData[pagePath];
       },
     }),
+    pluginRewriteAll()
   ],
 });

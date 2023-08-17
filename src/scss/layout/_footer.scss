@@ -1,11 +1,13 @@
+@use "../global";
+
 #footer {
   padding-bottom: 0.8rem;
-  background-color: $color-black;
-  color: $color-white;
+  background-color: global.$color-black;
+  color: global.$color-white;
   text-align: center;
 
   & .copyright {
-    @include respond(phone) {
+    @include global.respond(phone) {
     }
   }
 }

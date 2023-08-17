@@ -1,3 +1,5 @@
+@use "../global";
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -20,7 +22,7 @@
     }
   }
 
-  @include respond(phone){
+  @include global.respond(phone){
     padding: 0 1.6rem;
   }
 }
@@ -48,7 +50,7 @@
 }
 
 #navi a {
-  color: $color-white;
+  color: global.$color-white;
 }
 
 .open #navi {
@@ -60,12 +62,12 @@
   padding-bottom: 6rem;
   text-align: justify;
   text-transform: uppercase;
-  border-top: 1px solid $color-white;
+  border-top: 1px solid global.$color-white;
 
   & li {
     width: 100%;
     padding: 2rem 0;
-    border-bottom: 1px solid $color-white;
+    border-bottom: 1px solid global.$color-white;
   }
 }
 
@@ -108,7 +110,7 @@
     &::after {
       width: 3rem;
       height: 2px;
-      background-color: $color-black;
+      background-color: global.$color-black;
       display: inline-block;
     }
 
@@ -146,12 +148,12 @@
   &__checkbox:checked + &__button &__icon::before {
     transform: rotate(135deg); //ROTATE TOP LINE
     top: 0rem;
-    background-color: $color-white;
+    background-color: global.$color-white;
   }
   &__checkbox:checked + &__button &__icon::after {
     transform: rotate(-135deg); //ROTATE BOTTOM LIN
     top: 0rem;
-    background-color: $color-white;
+    background-color: global.$color-white;
   }
 }
 
@@ -170,7 +172,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: $color-black;
+  background: global.$color-black;
   opacity: 0.9;
   z-index: -1;
   cursor: pointer;

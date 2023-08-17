@@ -54,8 +54,8 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0
   sass:
-    specifier: ^1.63.6
-    version: 1.63.6
+    specifier: ^1.65.1
+    version: 1.65.1
   stylelint:
     specifier: 15.10.1
     version: 15.10.1
@@ -79,10 +79,16 @@ devDependencies:
     version: 5.0.1(stylelint@15.10.1)
   vite:
     specifier: ^4.4.9
-    version: 4.4.9(@types/node@20.5.0)(sass@1.63.6)
+    version: 4.4.9(@types/node@20.5.0)(sass@1.65.1)
+  vite-js:
+    specifier: 'link:'
+    version: 'link:'
   vite-plugin-handlebars:
     specifier: ^1.6.0
-    version: 1.6.0(sass@1.63.6)
+    version: 1.6.0(sass@1.65.1)
+  vite-plugin-rewrite-all:
+    specifier: ^1.0.1
+    version: 1.0.1(vite@4.4.9)
 
 packages:
 
@@ -1510,6 +1516,11 @@ packages:
     dependencies:
       ini: 1.3.8
       proto-list: 1.2.4
+    dev: true
+
+  /connect-history-api-fallback@1.6.0:
+    resolution: {integrity: sha512-e54B99q/OUoH64zYYRf3HBP5z24G38h5D3qXu23JGRoigpX5Ss4r9ZnDk3g0Z8uQC2x2lPaJ+UlWBc1ZWBWdLg==}
+    engines: {node: '>=0.8'}
     dev: true
 
   /cosmiconfig-typescript-loader@4.3.0(@types/node@20.5.0)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.1.6):
@@ -4202,8 +4213,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /sass@1.63.6:
-    resolution: {integrity: sha512-MJuxGMHzaOW7ipp+1KdELtqKbfAWbH7OLIdoSMnVe3EXPMTmxTmlaZDCTsgIpPCs3w99lLo9/zDKkOrJuT5byw==}
+  /sass@1.65.1:
+    resolution: {integrity: sha512-9DINwtHmA41SEd36eVPQ9BJKpn7eKDQmUHmpI0y5Zv2Rcorrh0zS+cFrt050hdNbmmCNKTW3hV5mWfuegNRsEA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -4851,18 +4862,28 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-handlebars@1.6.0(sass@1.63.6):
+  /vite-plugin-handlebars@1.6.0(sass@1.65.1):
     resolution: {integrity: sha512-/TZ2FadScvJW6fmQ+3m3stm6ns+tDZ3VAgzEkSQYQurAnaQ/3MJfidhmTXzD1Hu1iwgkI3lNuEqybzjjKemCTg==}
     dependencies:
       handlebars: 4.7.7
-      vite: 2.9.16(sass@1.63.6)
+      vite: 2.9.16(sass@1.65.1)
     transitivePeerDependencies:
       - less
       - sass
       - stylus
     dev: true
 
-  /vite@2.9.16(sass@1.63.6):
+  /vite-plugin-rewrite-all@1.0.1(vite@4.4.9):
+    resolution: {integrity: sha512-W0DAchC8ynuQH0lYLIu5/5+JGfYlUTRD8GGNtHFXRJX4FzzB9MajtqHBp26zq/ly9sDt5BqrfdT08rv3RbB0LQ==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0
+    dependencies:
+      connect-history-api-fallback: 1.6.0
+      vite: 4.4.9(@types/node@20.5.0)(sass@1.65.1)
+    dev: true
+
+  /vite@2.9.16(sass@1.65.1):
     resolution: {integrity: sha512-X+6q8KPyeuBvTQV8AVSnKDvXoBMnTx8zxh54sOwmmuOdxkjMmEJXH2UEchA+vTMps1xw9vL64uwJOWryULg7nA==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -4882,12 +4903,12 @@ packages:
       postcss: 8.4.28
       resolve: 1.22.2
       rollup: 2.77.3
-      sass: 1.63.6
+      sass: 1.65.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vite@4.4.9(@types/node@20.5.0)(sass@1.63.6):
+  /vite@4.4.9(@types/node@20.5.0)(sass@1.65.1):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4919,7 +4940,7 @@ packages:
       esbuild: 0.18.13
       postcss: 8.4.28
       rollup: 3.28.0
-      sass: 1.63.6
+      sass: 1.65.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -5042,5 +5063,5 @@ packages:
       '@types/eslint': 8.44.2
       chalk: 4.1.2
       eslint: 8.45.0
-      vite: 4.4.9(@types/node@20.5.0)(sass@1.63.6)
+      vite: 4.4.9(@types/node@20.5.0)(sass@1.65.1)
     dev: true

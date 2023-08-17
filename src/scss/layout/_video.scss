@@ -1,3 +1,5 @@
+@use "../global";
+
 #video {
   display: block;
   width: 100%;
@@ -8,7 +10,7 @@
     object-fit: fill;
     overflow: clip;
 
-    @include respond(phone){
+    @include global.respond(phone){
       width: 100%;
       height: 100vh;
       object-fit: cover;

@@ -9,7 +9,7 @@
     "es:lint": "eslint \"src/**/*.js\"",
     "lint": "pnpm run html:lint && npm run style:lint -- --fix && npm run es:lint -- --fix",
     "dev": "vite",
-    "build": "vite build && html-beautify dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
+    "build": "vite build && html-beautify dist/**/*.html && esbuild src/js/*.js --bundle --minify --outdir=dist/assets/js/",
     "preview": "pnpm run lint && vite preview"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "markuplint": "^3.12.0",
     "postcss-sort-media-queries": "^5.2.0",
     "prettier": "^3.0.0",
-    "sass": "^1.63.6",
+    "sass": "^1.65.1",
     "stylelint": "15.10.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-property-sort-order-smacss": "^9.1.0",
@@ -38,6 +38,8 @@
     "stylelint-prettier": "^4.0.0",
     "stylelint-scss": "^5.0.1",
     "vite": "^4.4.9",
-    "vite-plugin-handlebars": "^1.6.0"
+    "vite-js": "link:",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-rewrite-all": "^1.0.1"
   }
 }
