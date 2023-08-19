@@ -8,8 +8,8 @@
     "style:lint": "stylelint \"src/**/*.scss\"",
     "es:lint": "eslint \"src/**/*.js\"",
     "lint": "pnpm run html:lint && npm run style:lint -- --fix && npm run es:lint -- --fix",
-    "dev": "vite",
-    "build": "vite build && html-beautify dist/**/*.html && esbuild src/js/*.js --bundle --minify --outdir=dist/assets/js/",
+    "dev": "vite --host",
+    "build": "vite build && html-beautify dist/**/*.html && esbuild src/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
     "preview": "pnpm run lint && vite preview"
   },
   "devDependencies": {

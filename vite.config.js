@@ -3,7 +3,7 @@ import path, { resolve } from "path";
 import globule from "globule";
 import eslint from "@nabla/vite-plugin-eslint";
 import handlebar from "vite-plugin-handlebars";
-import pluginRewriteAll from "vite-plugin-rewrite-all"
+import pluginRewriteAll from "vite-plugin-rewrite-all";
 
 const inputs = {};
 const documents = globule.find([`./src/**/*.html`, `./src/**/*.pug`], {
@@ -28,7 +28,8 @@ const pageData = {
 
 export default defineConfig({
   root: "./src",
-  base:'./',
+  base: "./",
+  public: "./public/",
   server: {
     host: true,
     port: 5500,
@@ -45,7 +46,6 @@ export default defineConfig({
         entryFileNames: `assets/js/[name].js`,
         chunkFileNames: `assets/js/[name].js`,
         assetFileNames: (assetInfo) => {
-
           if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
             return `assets/images/[name].[ext]`;
           }
@@ -72,6 +72,6 @@ export default defineConfig({
         return pageData[pagePath];
       },
     }),
-    pluginRewriteAll()
+    pluginRewriteAll(),
   ],
 });
