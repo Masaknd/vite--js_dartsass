@@ -9,3 +9,5 @@ Discovering the solution of the problem above and found some resources below:
 https://github.com/vitejs/vite/issues/4556
 
 I tried "vite-plugin-rewrite-all" but didn't work for my project
+
+The bug above has been solved by fixing vite.config.js and change index.js and scss root src
