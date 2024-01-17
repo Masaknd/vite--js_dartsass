@@ -1,6 +1,5 @@
 # Vite boilerplate for Vanilla.js with Dart-Sass
-<img src="https://img.shields.io/badge/-Javascript-000.svg?logo=javascript&style=flat-square"><img src="https://img.shields.io/badge/-Sass-fff.svg?logo=Sass&style=flat-square"><img src="https://img.shields.io/badge/-Html5-fff.svg?logo=html5&style=flat-square">
-
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white), ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E), ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 Vite boilerplate to build MPA/static websites
 
 ## Description
