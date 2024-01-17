@@ -1,4 +1,5 @@
 # Vite boilerplate for Vanilla.js with Dart-Sass
+<img src="https://img.shields.io/badge/-Javascript-000.svg?logo=javascript&style=flat-square"><img src="https://img.shields.io/badge/-Sass-ffffff.svg?logo=Sass&style=flat-square"><img src="https://img.shields.io/badge/-Html5-ffffff.svg?logo=html5&style=flat-square">
 
 Vite boilerplate to build MPA/static websites
 
