@@ -9,7 +9,7 @@ Save main JS files to "main" under js folder. For some features, make new js fil
 
 ## Getting Started
 
-Clone it to your direction
+Clone files to your direction
 
 ### Dependencies
 
@@ -43,7 +43,7 @@ No specification
 
 ## Authors
 
-Masaknd
+Masaknd:
 [@Masaknd_dsgn](https://twitter.com/Masaknd_dsgn)
 
 ## Version History
@@ -59,8 +59,6 @@ Masaknd
   https://github.com/vitejs/vite/issues/4556
 
 ## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
