@@ -1,13 +1,71 @@
-# Vite--js_dartsass
+# Vite boilerplate for Vanilla.js with Dart-Sass
 
-this is a prototype vite compiler for MPA with Vanilla JS and sass
+Vite boilerplate to build MPA/static websites
 
-A bug: inconsistency of the result of running dev mode and build
-Problem; running dev mode doesn't compile scss link directory to css on html thus changes are not reflected on HRM
+## Description
 
-Discovering the solution of the problem above and found some resources below:
-https://github.com/vitejs/vite/issues/4556
+Use dart-sass to style your products and save files each component folders which are under scss folder.
+Save main JS files to "main" under js folder. For some features, make new js files under "library folder".
 
-I tried "vite-plugin-rewrite-all" but didn't work for my project
+## Getting Started
 
-The bug above has been solved by fixing vite.config.js and change index.js and scss root src
+Clone it to your direction
+
+### Dependencies
+
+- pnpm need to be installed
+  To use npm or yarn, change "pnpm" in package.json > scripts to "npm".
+
+### Installing
+
+node modules installation
+$pnpm install
+
+### Executing program
+
+"dev": development mode
+
+```
+$ pnpm dev
+```
+
+"build": build mode
+
+```
+$ pnpm build
+```
+
+## Help
+
+No specification
+
+```
+
+```
+
+## Authors
+
+Masaknd
+[@Masaknd_dsgn](https://twitter.com/Masaknd_dsgn)
+
+## Version History
+
+- 0.1
+  Problem: inconsistency of the result of running dev mode and build
+  details: running dev mode doesn't compile scss link directory to css on html thus changes are not reflected on HRM
+
+  - See [commit change]() or See [release history]()
+
+- 0.2
+  The problem above was solved by fixing "vite.config.js", also customized index.js and scss root src
+  https://github.com/vitejs/vite/issues/4556
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+
+- [https://github.com/vitejs/vite/issues/4556](https://github.com/vitejs/vite/issues/4556)
