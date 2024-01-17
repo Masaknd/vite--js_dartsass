@@ -13,24 +13,22 @@ Clone it to your direction
 
 ### Dependencies
 
-- pnpm need to be installed
+- pnpm need to be installed<br>
   To use npm or yarn, change "pnpm" in package.json > scripts to "npm".
 
 ### Installing
 
-node modules installation
+node modules installation <br>
 $pnpm install
 
 ### Executing program
 
 "dev": development mode
-
 ```
 $ pnpm dev
 ```
 
 "build": build mode
-
 ```
 $ pnpm build
 ```
