@@ -24,20 +24,18 @@ $pnpm install
 ### Executing program
 
 dev: development mode
-```$ pnpm dev
+```
+$ pnpm dev
 ```
 
 build: build mode
-```$ pnpm build
+```
+$ pnpm build
 ```
 
 ## Help
 
 No specification
-
-```
-
-```
 
 ## Authors
 
