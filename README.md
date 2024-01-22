@@ -1,5 +1,6 @@
 # Vite boilerplate for Vanilla.js with Dart-Sass
- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  &nbsp; ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) &nbsp; ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) <br>
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) &nbsp; ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) &nbsp; ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) <br>
 Vite boilerplate to build MPA/static websites
 
 ## Description
@@ -10,6 +11,7 @@ Save main JS files to "main" under js folder. For some features, make new js fil
 ## Getting Started
 
 Clone files to your direction
+$ git clone URL
 
 ### Dependencies
 
@@ -24,11 +26,13 @@ $pnpm install
 ### Executing program
 
 dev: development mode
+
 ```
 $ pnpm dev
 ```
 
 build: build mode
+
 ```
 $ pnpm build
 ```
