@@ -44,13 +44,13 @@ Masaknd:
 
 ## Version History
 
-- 0.1
+- bug detected
   Problem: inconsistency of the result of running dev mode and build
   details: running dev mode doesn't compile scss link directory to css on html thus changes are not reflected on HRM
 
   - See [commit change]() or See [release history]()
 
-- 0.2
+- bug fixed
   The problem above was solved by fixing "vite.config.js", also customized index.js and scss root src
   https://github.com/vitejs/vite/issues/4556
 
