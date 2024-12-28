@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@nabla/vite-plugin-eslint':
         specifier: github:nabla/vite-plugin-eslint
-        version: git+https://git@github.com:nabla/vite-plugin-eslint.git#48b074c7f968a269b42ca204f60868ffe6923643(eslint@8.45.0)(vite@5.3.6(@types/node@20.11.19)(sass@1.65.1))
+        version: git+https://git@github.com:nabla/vite-plugin-eslint.git#86e82c43a4a76ee1b8810e34d84c8e38a3ee0e4b(eslint@8.45.0)(vite@5.3.6(@types/node@20.11.19)(sass@1.65.1))
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.33)
@@ -508,12 +508,12 @@ packages:
   '@markuplint/types@3.9.0':
     resolution: {integrity: sha512-+z8qlubU9JCzT1GGqXQ1Ue6EET5B+G0ci6Z/IN0XeksvyWYSXYWrHqq4ccaoC+tLBzcoJNyj+eQhDAqQ+6Kg5A==}
 
-  '@nabla/vite-plugin-eslint@git+https://git@github.com:nabla/vite-plugin-eslint.git#48b074c7f968a269b42ca204f60868ffe6923643':
-    resolution: {commit: 48b074c7f968a269b42ca204f60868ffe6923643, repo: git@github.com:nabla/vite-plugin-eslint.git, type: git}
-    version: 2.0.4
+  '@nabla/vite-plugin-eslint@git+https://git@github.com:nabla/vite-plugin-eslint.git#86e82c43a4a76ee1b8810e34d84c8e38a3ee0e4b':
+    resolution: {commit: 86e82c43a4a76ee1b8810e34d84c8e38a3ee0e4b, repo: git@github.com:nabla/vite-plugin-eslint.git, type: git}
+    version: 2.0.5
     peerDependencies:
       eslint: ^8.45 || ^9
-      vite: ^4 || ^5
+      vite: ^4 || ^5 || ^6
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2111,8 +2111,8 @@ packages:
     resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
     hasBin: true
 
-  nanoid@3.3.7:
-    resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
+  nanoid@3.3.8:
+    resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -3350,7 +3350,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nabla/vite-plugin-eslint@git+https://git@github.com:nabla/vite-plugin-eslint.git#48b074c7f968a269b42ca204f60868ffe6923643(eslint@8.45.0)(vite@5.3.6(@types/node@20.11.19)(sass@1.65.1))':
+  '@nabla/vite-plugin-eslint@git+https://git@github.com:nabla/vite-plugin-eslint.git#86e82c43a4a76ee1b8810e34d84c8e38a3ee0e4b(eslint@8.45.0)(vite@5.3.6(@types/node@20.11.19)(sass@1.65.1))':
     dependencies:
       '@types/eslint': 8.44.2
       chalk: 4.1.2
@@ -5074,7 +5074,7 @@ snapshots:
 
   mustache@4.2.0: {}
 
-  nanoid@3.3.7: {}
+  nanoid@3.3.8: {}
 
   natural-compare-lite@1.4.0: {}
 
@@ -5268,19 +5268,19 @@ snapshots:
 
   postcss@8.4.33:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.8
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
   postcss@8.4.38:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.8
       picocolors: 1.0.0
       source-map-js: 1.2.0
 
   postcss@8.4.47:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.8
       picocolors: 1.1.0
       source-map-js: 1.2.1
 
